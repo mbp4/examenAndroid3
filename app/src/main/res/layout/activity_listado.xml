@@ -13,7 +13,6 @@
         >
 
         <TextView
-            android:id="@+id/textTitulo"
             android:layout_width="338dp"
             android:layout_height="wrap_content"
             android:padding="16dp"
