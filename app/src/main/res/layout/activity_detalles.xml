@@ -22,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@color/black"
+        android:background=""
         >
 
     <TextView
@@ -31,7 +31,6 @@
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:text="titulo"
-        android:textColor="@color/white"
         android:textSize="20sp" />
 
     <TextView
@@ -39,7 +38,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:textColor="@color/white"
         android:text="descripcion"
          />
 
@@ -48,7 +46,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:textColor="@color/white"
         android:text="fecha"
        />
 
@@ -57,7 +54,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:textColor="@color/white"
         android:text="prioridad"
          />
 
@@ -66,15 +62,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:textColor="@color/white"
         android:text="coste"
          />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="340dp"
-        android:background="@color/black">
+        android:layout_height="340dp">
 
     </LinearLayout>
 
@@ -84,8 +78,7 @@
         android:padding="16dp"
         android:id="@+id/btnVolver"
         android:text="Volver"
-        android:background="@android:color/darker_gray"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="20sp" />
 
 </LinearLayout>
