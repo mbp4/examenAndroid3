@@ -52,8 +52,9 @@ class ListadoActivity: ComponentActivity() {
         btnHechas.setOnClickListener { pendientes = false; actualizarLista() }
 
         lista.setOnItemClickListener { _, _, position, _ ->
+            val tarea = if (pendientes) RegistroActivity.pendientes[position] else RegistroActivity.completadas[position]
             val intent = Intent(this, DetallesActivity::class.java)
-            intent.putExtra("posicion", position)
+            intent.putExtra("tareaSeleccionada", tarea)
             startActivity(intent)
         }
 

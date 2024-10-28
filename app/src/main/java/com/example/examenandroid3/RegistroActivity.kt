@@ -1,11 +1,12 @@
 package com.example.examenandroid3
 
-import android.app.Activity
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Spinner
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import java.time.LocalDate
@@ -22,7 +23,7 @@ class RegistroActivity : ComponentActivity() {
     private lateinit var textNombre: EditText
     private lateinit var textDescripcion: EditText
     private lateinit var textFecha: EditText
-    private lateinit var textPrioridad: EditText
+    private lateinit var spinnerPrioridad: Spinner
     private lateinit var textCoste: EditText
     private lateinit var btnRegistrar: Button
     private lateinit var btnCancelar: Button
@@ -36,13 +37,17 @@ class RegistroActivity : ComponentActivity() {
         textNombre = findViewById(R.id.textNombre)
         textDescripcion = findViewById(R.id.textDescripcion)
         textFecha = findViewById(R.id.textFecha)
-        textPrioridad = findViewById(R.id.textPrioridad)
+        spinnerPrioridad = findViewById(R.id.spinnerPrioridad)
         textCoste = findViewById(R.id.textCoste)
         btnRegistrar = findViewById(R.id.Registrar)
         btnCancelar = findViewById(R.id.Cancelar)
 
         fechaSeleccionada = LocalDate.now()
         textFecha.setText(fechaSeleccionada.toString())
+
+        val opcionesPrioridad = listOf("URGENTE", "NO URGENTE")
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, opcionesPrioridad)
+        spinnerPrioridad.adapter = adapter
 
         textFecha.setOnClickListener {
             val calendario = Calendar.getInstance()
@@ -70,8 +75,8 @@ class RegistroActivity : ComponentActivity() {
     private fun registrarTarea() {
         val nombre = textNombre.text.toString()
         val descripcion = textDescripcion.text.toString()
-        val prioridad = textPrioridad.text.toString()
-        val coste = textCoste.text.toString().toIntOrNull() ?: 0
+        val prioridad = spinnerPrioridad.selectedItem.toString()
+        val coste = textCoste.text.toString().toDoubleOrNull() ?: 0
 
         if (nombre.isNotEmpty()) {
             val nuevaTarea = Tarea(nombre, descripcion, fechaSeleccionada, prioridad, coste)
