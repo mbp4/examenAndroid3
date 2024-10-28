@@ -4,62 +4,77 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="316dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:text="Tarea"
-        android:textColor="@color/black"
-        android:textSize="24sp" />
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorFondo1"
+            android:padding="16dp"
+            android:text="Tarea"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/black"
+        >
 
     <TextView
         android:id="@+id/textNombre"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:text="titulo"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="20sp" />
 
     <TextView
         android:id="@+id/textDescripcion"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
+        android:textColor="@color/white"
         android:text="descripcion"
-        android:textColor="@color/black"
-        />
+         />
 
     <TextView
         android:id="@+id/textFecha"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
+        android:textColor="@color/white"
         android:text="fecha"
-        android:textColor="@color/black"
-        />
+       />
 
     <TextView
         android:id="@+id/textPrioridad"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
+        android:textColor="@color/white"
         android:text="prioridad"
-        android:textColor="@color/black"
-        />
+         />
 
     <TextView
         android:id="@+id/textCoste"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
+        android:textColor="@color/white"
         android:text="coste"
-        android:textColor="@color/black"
-        />
+         />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="340dp">
+        android:layout_height="340dp"
+        android:background="@color/black">
 
     </LinearLayout>
 
@@ -69,7 +84,8 @@
         android:padding="16dp"
         android:id="@+id/btnVolver"
         android:text="Volver"
-        android:textColor="@color/black"
+        android:background="@android:color/darker_gray"
+        android:textColor="@color/white"
         android:textSize="20sp" />
 
 </LinearLayout>
