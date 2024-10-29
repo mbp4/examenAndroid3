@@ -36,8 +36,6 @@ class DetallesActivity: ComponentActivity() {
 
             if (tarea.prioridad == "URGENTE") {
                 textPrioridad.setTextColor(Color.RED)
-            } else {
-                textPrioridad.setTextColor(Color.GREEN)
             }
 
             textCoste.text = "Tiene un coste de " + tarea.coste.toString() + "€"
