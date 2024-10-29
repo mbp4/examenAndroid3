@@ -15,7 +15,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="258dp"
+        android:layout_height="611dp"
         android:orientation="vertical">
 
         <EditText
@@ -40,11 +40,11 @@
 
             <EditText
                 android:id="@+id/textFecha"
-                android:layout_width="wrap_content"
+                android:layout_width="191dp"
                 android:layout_height="wrap_content"
-                android:hint="Fecha"
                 android:clickable="true"
                 android:focusable="true"
+                android:hint="Fecha"
                 android:padding="16dp" />
 
             <Spinner
@@ -67,7 +67,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal">
@@ -75,18 +75,22 @@
 
         <Button
             android:id="@+id/Registrar"
-            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:layout_marginEnd="6dp"
-            android:background="@color/colorBtn2"
+            android:background="@color/colorFondo1"
             android:text="Registrar" />
 
 
         <Button
             android:id="@+id/Cancelar"
-            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:background="@color/botones"
+            android:layout_weight="1"
+            android:background="@color/colorFondo1"
             android:text="Cancelar" />
 
     </LinearLayout>

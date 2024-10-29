@@ -76,6 +76,7 @@
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:id="@+id/btnVolver"
+        android:background="@color/colorFondo1"
         android:text="Volver"
         android:textColor="@color/black"
         android:textSize="20sp" />
